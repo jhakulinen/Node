@@ -1,6 +1,7 @@
 var axios = require("axios")
 var http = require("http")
 var data
+const PORT = process.env.PORT || 5000;
 const promise = axios
     .get("http://www.omdbapi.com/?t=Sons+Of+Anarchy&apikey=ceec147d")
         .then((response) => {
@@ -32,4 +33,6 @@ http
     
     response.end();
   })
-  .listen(3000);
+  .listen(PORT);
+
+  
